@@ -1,0 +1,2 @@
+import{a as o}from"./vendor-Dr0KmOfh.js";const r="https://pixabay.com/api/",s="52398944-8832a4a5cb581cf5dc4de5156";async function p(e,t){try{const a={key:s,q:e,image_type:"photo",orientation:"horizontal",safesearch:!0,per_page:15,page:t};return(await o.get(r,{params:a})).data}catch(a){throw new Error(`Failed to fetch images: ${a.message}`)}}export{p as g};
+//# sourceMappingURL=pixabay-api-Bc-cxu7d.js.map

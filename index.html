@@ -2,38 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-12/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/styles-DvPDDfy5.css">
+    <title>Image Search App</title>
+    <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/styles-DMfn9b28.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-Dr0KmOfh.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/pixabay-api-Bc-cxu7d.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/render-functions-Dbz2X5Ge.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/styles-DhNvP4-U.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-CX4EDM7x.css">
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <a class="nav-logo" href="./index.html" aria-label="Site logo">
-            <svg class="nav-logo-icon" width="100" height="30">
-              <use href="/goit-js-hw-12/assets/logo-CWKflIk4.svg"></use>
-            </svg>
-          </a>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link {=$highlight-act}" href="./pixabay-api.html"
-                >pixabay api</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link {=$highlight-curr}"
-                href="./render-functions.html"
-                >render functions</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <!-- Search form -->
+    <header class="search-form" id="search-form">
+      <form class="form">
+        <input
+          type="text"
+          name="searchQuery"
+          class="search-input"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button type="submit" class="search-btn">🔍 Search</button>
+      </form>
     </header>
 
-    <main></main>
+    <!-- Main content -->
+    <main class="main-container">
+      <!-- Gallery -->
+      <ul class="gallery"></ul>
+
+      <!-- Load more button -->
+      <button type="button" class="load-more is-hidden">Load more</button>
+
+      <!-- Loader -->
+      <div class="loader is-hidden">
+        <div class="spinner"></div>
+        <span class="loader-text">Loading images...</span>
+      </div>
+
+      <!-- End message -->
+      <div class="end-message is-hidden">
+        We're sorry, but you've reached the end of search results.
+      </div>
+    </main>
+
   </body>
 </html>
